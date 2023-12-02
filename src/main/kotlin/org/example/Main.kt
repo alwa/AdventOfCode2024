@@ -5,7 +5,7 @@ import java.io.File
 
 fun main() {
     val twoPartChallenges: List<TwoPartChallenge<*,*>> =
-        listOf(Day1)
+        listOf(Day1, Day2)
     for (i in 1..twoPartChallenges.size) {
         println("=Day $i=")
         val file = File(ClassLoader.getSystemResource("day${i}/input.txt").file)
