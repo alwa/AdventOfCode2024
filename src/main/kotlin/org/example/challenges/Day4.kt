@@ -38,6 +38,7 @@ object Day4 : TwoPartChallenge<Int, Int> {
             while (scratchCards[index] > 0) {
                 scratchCards[index] -= 1
                 total++
+                // TODO: Replaces this messy and inefficient code
                 val sanitizedLine = it.replace("  ", " ")
                 val winningNumbers: List<Int> = getWinningNumbers(sanitizedLine)
                 val actualNumbers: List<Int> = getActualNumbers(sanitizedLine)
