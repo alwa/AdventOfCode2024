@@ -27,6 +27,7 @@ object Day4 : TwoPartChallenge<Int, Int> {
     }
 
     override fun part2(file: File): Int {
+        // FIXME: Super slow...
         var numberOfLines = 0
         file.forEachLine {
             numberOfLines++
