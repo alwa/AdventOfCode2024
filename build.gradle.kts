@@ -46,7 +46,7 @@ apply(plugin = "org.sonarqube")
 
 sonarqube {
     properties {
-        property("sonar.projectKey", "alwa_AdventOfCode2023")
+        property("sonar.projectKey", "alwa_AdventOfCode2024")
         property("sonar.organization", "alwa")
         property("sonar.host.url", "https://sonarcloud.io")
         property("sonar.coverage.jacoco.xmlReportPaths", "$buildDir/reports/jacoco/test/jacocoTestReport.xml")
