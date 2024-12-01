@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.7.21"
+    kotlin("jvm") version "2.0.20"
     application
     id("org.sonarqube") version "4.4.1.3373"
     id("jacoco")
@@ -23,7 +23,7 @@ tasks.test {
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "11"
+    kotlinOptions.jvmTarget = "21"
 }
 
 apply(plugin = "jacoco")

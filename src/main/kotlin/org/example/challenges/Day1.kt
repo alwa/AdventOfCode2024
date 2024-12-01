@@ -21,6 +21,7 @@ object Day1 : TwoPartChallenge<Int, Int> {
     override fun part1(file: File): Int {
         var total = 0
         file.forEachLine {
+            it.find
             val firstDigit = it.find { char -> char.isDigit() }
             val lastDigit = it.findLast { char -> char.isDigit() }
             val combinedValue = (firstDigit.toString() + lastDigit).toInt()
