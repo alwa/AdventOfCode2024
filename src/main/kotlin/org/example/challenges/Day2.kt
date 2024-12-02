@@ -21,17 +21,7 @@ object Day2 : TwoPartChallenge<Int, Int> {
             reports.add(report)
         }
         for (reportIndex in reports.indices) {
-            var safe = true
-            for (levelIndex in reports[reportIndex].indices) {
-                if (levelIndex < reports[reportIndex].size - 1) {
-                    safe =
-                        (reports[reportIndex][levelIndex] - reports[reportIndex][levelIndex + 1]).absoluteValue in 1..3
-                } else {
-                    safe = true
-                }
-                if (!safe) break
-            }
-            safeLevelDiffs.add(safe)
+            safeLevelDiffs.add(isLevelSafe(reports, reportIndex))
         }
         for (reportIndex in reports.indices) {
             var increasing: Boolean? = null
@@ -53,6 +43,20 @@ object Day2 : TwoPartChallenge<Int, Int> {
             }
         }
         return total
+    }
+
+    private fun isLevelSafe(reports: MutableList<IntArray>, reportIndex: Int): Boolean {
+        var safe = true
+        for (levelIndex in reports[reportIndex].indices) {
+            if (levelIndex < reports[reportIndex].size - 1) {
+                safe =
+                    (reports[reportIndex][levelIndex] - reports[reportIndex][levelIndex + 1]).absoluteValue in 1..3
+            } else {
+                safe = true
+            }
+            if (!safe) break
+        }
+        return safe
     }
 
     override fun part2(file: File): Int {
