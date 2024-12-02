@@ -12,14 +12,12 @@ object Day2 : TwoPartChallenge<Int, Int> {
         val reports = mutableListOf<IntArray>()
         val safeLevelDiffs = mutableListOf<Boolean>()
         file.forEachLine {
-            val report = IntArray(5)
-            val (first, second, third, fourth, fifth) = it.split(" ")
+            val numbers = it.split(" ")
                 .map { string -> string.trimStart().trimEnd().toInt() }
-            report[0] = first
-            report[1] = second
-            report[2] = third
-            report[3] = fourth
-            report[4] = fifth
+            val report = IntArray(numbers.size)
+            for (i in report.indices) {
+                report[i] = numbers[i]
+            }
             reports.add(report)
         }
         for (reportIndex in reports.indices) {
