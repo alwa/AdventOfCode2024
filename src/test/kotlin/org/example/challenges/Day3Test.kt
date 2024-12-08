@@ -13,7 +13,7 @@ class Day3Test {
 
     @Test
     fun `Part 2`() {
-        assertEquals(-1, Day3.part2(File(ClassLoader.getSystemResource("day3/testinput.txt").file)))
+        assertEquals(48, Day3.part2(File(ClassLoader.getSystemResource("day3/testinput2.txt").file)))
     }
 
 }
