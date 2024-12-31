@@ -3,11 +3,12 @@ package org.example
 import org.example.challenges.Day1
 import org.example.challenges.Day2
 import org.example.challenges.Day3
+import org.example.challenges.Day4
 import java.io.File
 
 fun main() {
     val twoPartChallenges: List<TwoPartChallenge<*, *>> =
-        listOf(Day1, Day2, Day3)
+        listOf(Day1, Day2, Day3, Day4)
     for (i in 1..twoPartChallenges.size) {
         println("=Day $i=")
         val file = File(ClassLoader.getSystemResource("day${i}/input.txt").file)

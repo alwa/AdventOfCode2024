@@ -34,18 +34,6 @@ object Day4 : TwoPartChallenge<Int, Int> {
             }
             diagonals.add(diag)
         }
-
-        for (j in 1 until lineLength) {
-            var diag = ""
-            var x = 0
-            var y = j
-            while (x < lines.size && y < lineLength) {
-                diag += lines[x][y]
-                x++
-                y++
-            }
-            diagonals.add(diag)
-        }
         val pattern = Regex("X.*?M.*?A.*?S")
         for (i in 0 until lines.size) {
             total += pattern.findAll(lines[i]).count()
